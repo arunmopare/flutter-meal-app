@@ -5,7 +5,7 @@ class CategoryMealsScreen extends StatelessWidget {
   // final categoryId;
   // final categorytitle;
 
-  // CategoryMealsScreen(this.categoryId, this.categorytitle);
+  // CategoryMealsScreen(this.categoryId, this.categoryR=Title);
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +15,14 @@ class CategoryMealsScreen extends StatelessWidget {
     final categoryId = routeArgs['id'];
     final categoryTitle = routeArgs['title'];
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          categoryTitle,
+        appBar: AppBar(
+          title: Text(
+            categoryTitle,
+          ),
         ),
-      ),
-      body: Center(
-        child: Text(
-          'The recepies for selected category',
-        ),
-      ),
-    );
+        body: ListView.builder(
+          itemBuilder: (ctx, index) {},
+          itemCount: 10,
+        ));
   }
 }
