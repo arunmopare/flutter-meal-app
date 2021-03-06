@@ -15,7 +15,7 @@ class MealDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget BuildContainer(Widget child) {
+  Widget buildContainer(Widget child) {
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
@@ -51,7 +51,7 @@ class MealDetailScreen extends StatelessWidget {
               ),
             ),
             buildSectionTitle(context, 'Ingredients'),
-            BuildContainer(
+            buildContainer(
               ListView.builder(
                 itemBuilder: (ctx, index) => Card(
                   color: Theme.of(context).accentColor,
@@ -65,7 +65,7 @@ class MealDetailScreen extends StatelessWidget {
               ),
             ),
             buildSectionTitle(context, 'Steps'),
-            BuildContainer(ListView.builder(
+            buildContainer(ListView.builder(
               itemBuilder: (ctx, index) => Column(
                 children: [
                   ListTile(
