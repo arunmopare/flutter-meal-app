@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation/screens/bottom_tab_screen.dart';
-import './screens/tabs_screen.dart';
+import '../screens/bottom_tab_screen.dart';
+import '../screens/filters_screen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/meal_detail_screen.dart';
 
@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
             CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) =>
             MealDetailScreen(),
+        FilterScreen.routeName: (ctx) => FilterScreen()
       },
     );
   }
@@ -60,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DdeliMeals'),
+        title: Text('DeliMeals'),
       ),
       body: Center(
         child: Text('Navigation Time'),
